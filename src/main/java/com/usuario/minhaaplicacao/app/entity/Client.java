@@ -1,25 +1,33 @@
 package com.usuario.minhaaplicacao.app.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import lombok.*;
+import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
-@Getter
-@Setter
+@Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Client {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  @NotBlank
-  private String nome;
-  @Column(nullable = false, unique = true)
+
+  private String name;
+
+  @Column(unique = true)
+  private String email;
+
+  @Column(unique = true)
   private String cpf;
-  private String logradouro;
-  private String bairro;
-  private String cidade;
-  private String estado;
-  private String cep;
+
+  private String password;
+
+  @Embedded
+  @Valid
+  private Address address;
 }
