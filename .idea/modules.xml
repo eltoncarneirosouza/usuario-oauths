@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usuario-oauth.iml" filepath="$PROJECT_DIR$/.idea/modules/usuario-oauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/usuario-oauth.main.iml" filepath="$PROJECT_DIR$/.idea/modules/usuario-oauth.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usuario-oauth.test.iml" filepath="$PROJECT_DIR$/.idea/modules/usuario-oauth.test.iml" />
     </modules>
   </component>
 </project>
